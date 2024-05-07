@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  StyleSheet,
-  View,
-  FlatList,
-  Image,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import { View, FlatList, Image, Text, TouchableOpacity } from "react-native";
 
 const NextScreen = () => {
   const [lista, setLista] = useState([]);
@@ -51,22 +44,17 @@ const NextScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
-  pokemonContainer: {
-    flexDirection: "column",
-    alignItems: "center",
-    margin: 5,
-  },
   imagen: {
     width: 70,
     height: 70,
   },
-});
+};
 
 export default NextScreen;

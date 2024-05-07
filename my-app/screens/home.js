@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
   const navigateToPokeAPI = () => {
@@ -10,9 +10,9 @@ const HomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.title}>¡Bienvenido a tu PokeDex!</Text>
 
-      <Pressable style={styles.button} onPress={navigateToPokeAPI}>
+      <TouchableOpacity style={styles.button} onPress={navigateToPokeAPI}>
         <Text style={styles.buttonText}>Ir a la PokeAPI</Text>
-      </Pressable>
+      </TouchableOpacity>
     </View>
   );
 };
