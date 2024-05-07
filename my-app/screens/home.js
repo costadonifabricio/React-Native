@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { moderateScale } from "react-native-size-matters";
 
 const HomeScreen = ({ navigation }) => {
   const navigateToPokeAPI = () => {
@@ -8,10 +9,17 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>¡Bienvenido a tu PokeDex!</Text>
+      <Text style={[styles.title, { fontSize: moderateScale(24) }]}>
+        ¡Bienvenido a tu PokeDex!
+      </Text>
 
-      <TouchableOpacity style={styles.button} onPress={navigateToPokeAPI}>
-        <Text style={styles.buttonText}>Ir a la PokeAPI</Text>
+      <TouchableOpacity
+        style={[styles.button, { padding: moderateScale(10) }]}
+        onPress={navigateToPokeAPI}
+      >
+        <Text style={[styles.buttonText, { fontSize: moderateScale(18) }]}>
+          Ir a la PokeAPI
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -24,17 +32,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    fontSize: 24,
-    marginBottom: 20,
+    marginBottom: moderateScale(20),
   },
   button: {
     backgroundColor: "blue",
-    padding: 10,
     borderRadius: 5,
   },
   buttonText: {
     color: "white",
-    fontSize: 18,
   },
 });
 
